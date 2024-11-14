@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet   " href="/style.css">
+    <link rel="stylesheet" href="/animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="animation">
+        <div class="first-slide">
+            <div class="contentO">
+                <span>T</span>ic
+                <span>T</span>ac
+                <span>T</span>oe
+                <span>E</span>xplosion
+            </div>
+            <div id="loading-bar"></div>
+        </div>
+        <div class="second-slide">
+            <div class="contentT">
+                <span>T</span>ic
+                <span>T</span>ac
+                <span>T</span>oe
+                <span>E</span>xplosion
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="QueryRules">
+            <div class="contentRules">
+                <div class="headRules">T<span>i</span><span>c</span> T<span>a</span><span>c</span> T<span>o</span><span>e </span>R<span>u</span><span>l</span><span>e</span><span>s</span> && <span>G</span><span>u</span><span>i</span><span>d</span>e</div>
+                <div class="bodyRules">
+                    <div class="bodyHead">How To Play?</div>
+                    <div class="bodyDescrip">
+                        <p>1. Select the number of players (up to 4 players). Choose how many players will participate in the game.</p>
+                        <p>2. Once you've selected your players, click "Start Game" to begin the game and play with your co-players.</p>
+                        <p>3. After that, you'll be taken to a different UI where the game will begin.</p>
+                    
+                    </div>
+
+                    <div class="bodyHead">Ingame Rules</div>
+                    <div class="bodyDescrip">    
+                        <p>1. When the game starts, you can select players and click "Start Game" to initiate the game. You can also add more players if needed.</p>
+                        <p>2. If necessary, you can reset the game by clicking the "Reset" button.</p>
+                        <p>3. You can return to the homepage by clicking the "Home" icon.</p>      
+                        
+                        
+                        
+                    </div>
+
+                    <div class="bodyHead"> Win or Draw:</div>
+                    <div class="bodyDescrip">
+                        <ul id="ul">
+                            <li>The game has two possible outcomes: Win or Draw.</li>
+                            <li>If the game ends, and either a player wins or the game ends in a draw, click the "OK" button to start a new game.</li>
+                            <li>In 2-player and 3-player modes, the game requires a line of three tables to determine the winner.</li>
+                            <li>In 4-player mode, a line of four tables is required to determine the winner.</li>             
+
+                        </ul>
+                        
+                       
+                    </div>
+
+                    <div class="bodyHead"> Reminder:</div>
+                    <div class="bodyDescrip">                     
+                        <p>Player1 will always take the first turn in the game.</p>
+                        <p>Players take turns starting with Player 1, rotating through the selected number of players.</p>
+                    </div>
+                </div>
+                <div class="button-ok">
+                    <button id="Proceed">Proceed To the Game</button>
+                    </div>
+            </div>
+        </div>
+        <div id="nav">
+            <div id="logo-nav" class="text-cyan-100"> <span>T</span>ic <span>T</span>ac <span>E</span>xplosion</div>
+            <div id="darkmode">
+
+                    
+                <svg class="active" id="Light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg id="Dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                
+                
+            </div>
+        </div>
+        <div id="main-page">
+            <div id="main-content">
+            <div id="top-content">Play Tic-Tac-Toe against another player or with Friends
+                Play with Different board sizes</div>
+                <div id="toggle">
+                    <div id="button-selectplayer">
+                        <div class="display">Select Player</div>
+                        <div class="listDown">
+                            <li><a href="/twoPlayer"></a>Two Player</li>
+                            <li><a href="/threePlayer"></a>Three Player</li>
+                            <li><a href="/fourPlayer"></a>Four Player</li>
+                        </div>
+                    </div>
+                    <div id="button-start">Start Game</div>
+                </div>
+                <div id="div-back-end"></div>
+            </div>   
+            </div>
+            
+        </div>
+    </main>
+    
+</body>
+
+<script>
+    const QueryRules = document.querySelector('.QueryRules');
+const Proceed = document.querySelector('#Proceed');
+
+Proceed.addEventListener('click', () => {
+    QueryRules.classList.add('active');
+
+    setTimeout(() => {
+        QueryRules.style.display = "none";
+}, 500)
+})
+</script>
+
+<script src="/animation.js"></script>
+<script src="/darkmode.js"></script>
+<script src="/select.js"></script>
+
+
+
+
+</html>
+
+<!-- always look at the brigther side -->
